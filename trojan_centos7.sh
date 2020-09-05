@@ -64,7 +64,7 @@ if [ $real_addr == $local_addr ] ; then
 	cd /usr/share/nginx/html/
 	wget https://github.com/atrandys/v2ray-ws-tls/raw/master/web.zip
     	unzip web.zip
-	systemctl start nginx.service
+	systemctl restart nginx.service
 	#申请https证书
 	mkdir /usr/src/trojan-cert
 	curl https://get.acme.sh | sh
@@ -229,9 +229,7 @@ start_menu(){
     green " ===================================="
     green " 介绍：一键安装trojan      "
     green " 系统：>=centos7                       "
-    green " 作者：atrandys                      "
-    green " 网站：www.atrandys.com              "
-    green " Youtube：atrandys                   "
+    green " 作者：A                      "
     green " ===================================="
     echo
     green " 1. 安装trojan"
